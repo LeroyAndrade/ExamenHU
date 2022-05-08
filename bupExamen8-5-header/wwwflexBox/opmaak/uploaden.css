@@ -1,0 +1,199 @@
+:root{
+    --widthDocument: 94vw;
+    --colorWhite: #ffffff;
+    --colorMainBlack: #444444;
+}
+
+@font-face {
+    font-family: josefinSans;
+    src: url(../font/JosefinSans-Regular.ttf);
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 94vw;
+    box-sizing: content-box;
+    background-color: var(--colorMainBlack);
+    /*background-color: var(--colorMainBlack);*/
+    /*background-color: #44444;*/
+    height: 800vh;
+}
+
+header{
+    font-family: josefinSans;
+    color: var(--colorWhite);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#headerContainer{
+    align-self: flex-start;
+}
+
+.top{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: var(--widthDocument);
+    position: sticky;
+
+}
+
+main > span{
+    width: 33vw;
+}
+
+.hamburgerButton{
+    width: 3em;
+    color: var(--colorWhite);
+}
+
+hr.hrOne {
+    background-color: blue;
+    width: 100%;
+    display: block;
+    /*width: var(--widthDocument);*/
+}
+
+.headerMainTekst {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 59px;
+    color: var(--colorWhite);
+}
+
+main{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+#mainSelect{
+    width: auto;
+    border: 1px solid #C98421;
+    border-radius: 30px;
+    height: 4em;
+    padding: 0 10px;
+}
+
+select{
+    border: none;
+    background-color: var(--colorMainBlack);
+}
+
+select, select > option{
+    color: var(--colorWhite);
+}
+
+
+.mainItem{
+    width: inherit;
+    border: 1px solid #C98421;
+    border-radius: 30px;
+    height: 36px;
+    padding-top: 15px;
+    padding-left: 20px;
+    color: #FFF;
+    margin-bottom: 20px;
+}
+/*button*/
+.formButton{
+    border: 1px solid #C98421;
+    border: 1px solid #C98421;
+    border-color: #C98421;
+    border-radius: 30px;
+    font-size: 30px;
+    padding: 2px;
+    max-width: 96vw;
+}
+
+input, textarea{
+    background-color:  var(--colorMainBlack);
+    color: #fff;
+}
+
+textarea{
+    border: 1px solid #C98421;
+    border-radius: 30px;
+    width: 92vw;
+    height: 150px;
+    padding: 15px 0 0 10px;
+    margin-bottom: 20px;
+}
+
+placeholder{
+    color: #FFFFFF;
+}
+
+input[type="text"]{
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+
+/*draws*/
+.bolRechts{
+    position: fixed;
+    z-index: -1;
+    margin-top: -200px;
+    margin-left: 60%;
+
+}
+
+.circel{
+    height: 27px;
+    width: 27px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.vertical{
+    height: 80px;
+    width: 1px;
+    background-color: #fff;
+}
+
+.verticalOne{
+    display: block;
+    margin-top: -5px;
+    margin-left: 13px;
+}
+
+.horizontal{
+    background-color: #fff;
+    width: 80px;
+    height: 1px;
+}
+
+.horizontalOne{
+    display: block;
+    margin-top: -17px;
+    margin-left: 25px;
+}
+
+.circelTwo{
+    margin-top: 10px;
+}
+.circelThree{
+    display: block;
+    margin-top: -15px;
+    margin-left: 105px;
+}
+
+/* start rotaties */
+.rotate45{
+    transform: rotate(45deg);
+}
+
+.rotate90{
+    transform: rotate(90deg);
+}
+
+.rotate180{
+    transform: rotate(270deg);
+}

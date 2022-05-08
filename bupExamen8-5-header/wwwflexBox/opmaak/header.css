@@ -1,0 +1,224 @@
+:root{
+    --widthDocument: 94vw;
+    --colorWhite: #ffffff;
+    --colorMainBlack: #444444;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 94vw;
+    box-sizing: content-box;
+    background-color: var(--colorMainBlack);
+    overflow-x: hidden;
+    /*background-color: #44444;*/
+}
+
+#headerContainer{
+    background-color: var(--colorMainBlack);
+    /* start position sticky - workaround voor Flexbox
+    Flexbox's default rekt alle elementen uit naar dezelfde height waardoor
+    je niet kunt scrollen. Dus voeg align-self: flex-start op de sticky
+    element waardoor height wordt vervangen naar 'auto'.*/
+    position: sticky;
+    top: 0;
+    /* Dit is de oplossing:  in nieuwer webbrowsers
+    zal het ook zonder de volgende regel werken: align-self: flex-start; */
+    align-self: flex-start;
+
+    /* voor Safari */
+    position: -webkit-sticky;
+    /* end position sticky */
+}
+/*logo links boven*/
+
+#placeholderImage{
+    width: 100%;
+}
+
+#logo{
+    width: 33vw;
+    object-fit: fill;
+}
+
+section > div:nth-child(-n+3){
+
+}
+
+section > div:nth-child(2){
+    margin-top:20%;
+    position: absolute;
+}
+
+.top{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: var(--widthDocument);
+}
+
+/*menu */
+.fas.verbergen, .verbergen{
+    display: none;
+}
+
+nav{
+    display: flex;
+}
+
+
+/*delete me*/
+.del{
+    color: green;
+    display: flex;
+    font-size: 1em;
+    /*background-color: blue;*/
+}
+/*delete me*/
+
+
+.geopendeMenuItems{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 90vw;
+    left: 0;
+    background-color: var(--colorMainBlack);
+}
+
+.hamburgerButton{
+    width: 3em;
+    color: var(--colorWhite);
+}
+
+li{
+    color: #FFF;
+    font-size: 25px;
+    list-style-type: none;
+}
+
+a, a:visited{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 45px;
+}
+
+.navigationItems{
+    font-size: 45px;
+}
+
+
+/*animatie*/
+.nav__link{
+    color: #FFF;
+    text-decoration: none;
+    display: inline-block; /*Padding heeft pas zin na een inline-block element, te worden*/
+    padding: .2em .8em;
+    transform: translateY(-21.2em);
+    transition: transform .8s ease-in-out;
+}
+
+.nav__link--schuif-in{
+    transform: translateX(0);
+}
+
+.nav__link:hover{
+    background-color: green;
+}
+
+/*animatie tekst*/
+.nav__item{
+    color: #FFF;
+}
+.nav__item a{
+    padding-left: 2vw;
+}
+.nav__link--schuif-in .nav__text{
+
+    animation: animatie 5s forwards;
+    position: relative;
+}
+
+.hideForMobile{
+    display: none;
+}
+
+
+/*end menu mobile*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*START menu Tablet*/
+@media only screen and (min-width: 1023px) {
+    .hideForDesktop{
+        display: none;
+    }
+
+    .hideForMobile{
+        display: flex;
+    }
+
+    .geopendeMenuItems {
+        flex-direction: row;
+        background-color: initial;
+        width: 80vw;
+        margin-left: 18vw;
+        margin-top: -.5vh;
+    }
+
+    .verbergen {
+        display: inline-block;
+    }
+
+    .nav__link {
+        transform: translateY(0);
+    }
+
+    .navigationItems{
+        font-size: 25px;
+    }
+
+    section > div:nth-child(2){
+        margin-top:0;
+        position: absolute;
+    }
+
+    .nav__knop, .sluitKnop{
+        display: none;
+    }
+}
+
+/*@media only screen and (min-width: 1023px) {*/
+/*    .navigationItems{*/
+/*        font-size: 35px;*/
+/*    }*/
+/*    .nav__link::after {*/
+/*        margin-left: 1px;*/
+/*    }*/
+
+/*    .geopendeMenuItems {*/
+
+/*    }*/
+/*}*/
