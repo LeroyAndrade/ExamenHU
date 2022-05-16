@@ -1,0 +1,17 @@
+
+/*.hideForDesktop{*/
+/*    display: none;*/
+/*}*/
+
+
+
+@media only screen and (min-width: 767px) {
+    .hideForMobile{
+        display: none;
+    }
+
+
+
+
+}
+
