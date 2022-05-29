@@ -1,0 +1,222 @@
+.visibilityHidden{
+    visibility: hidden;
+}
+
+.temp{
+    display: none;
+}
+
+.titelText {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 59px;
+    color: var(--colorWhite);
+    font-size: 45px;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.blackhr{
+    width: 296px;
+    color: black!important;
+    border: 1px solid black;
+}
+
+/*dropdown*/
+#mainSelect{
+    width: 100%;
+    border: 1px solid #C98421;
+    border-radius: 30px;
+    height: 4em;
+    padding: 0 10px;
+}
+
+/*select*/
+
+select{
+    border: none;
+    background-color: var(--colorMainBlack);
+}
+
+select, select > option{
+    color: var(--colorWhite);
+}
+
+.formButton{
+    border: 1px solid #C98421;
+    border: 1px solid #C98421;
+    border-color: #C98421;
+    border-radius: 30px;
+    font-size: 30px;
+    padding: 2px;
+    max-width: 96vw;
+}
+
+.buttonGold{
+    width: auto;
+    border: 1px solid #C98421;
+    border-radius: 30px;
+    height: 36px;
+    padding-top: 15px;
+    padding-left: 20px;
+    color: #FFF;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+/*textarea*/
+input, textarea{
+    background-color:  var(--colorMainBlack);
+    color: #fff;
+}
+
+textarea{
+    border: 1px solid #C98421;
+    border-radius: 30px;
+    width: 92vw;
+    height: 258px;
+    padding: 15px 0 0 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+placeholder{
+    color: #FFFFFF;
+}
+
+/*buttons uploaden en opslaan*/
+.center{
+    text-align: center;
+}
+
+/*verzend knop*/
+.buttonSubmit{
+    margin: 0 auto;
+    width: 100%;
+    height: 60px;
+    align-content: start;
+    justify-self: start;
+    align-items: start;
+    padding-bottom: 10px;
+}
+
+/*experimenteel*/
+input[type="text"]{
+    border: 1px solid #C98421;
+    background-color: var(--colorMainBlack);
+    border-radius: 30px;
+    padding: 1em;
+    color: #FFF;
+    width: auto;
+
+    height: 36px;
+}
+
+#uploadSectorOne{
+    display: flex;
+    flex-direction: column;
+}
+
+#uploadBtn{
+    width: 88vw;
+}
+@media only screen and (min-width: 767px) {
+    body{
+    }
+
+    #uploadSectorOne{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #titelText::after{
+        margin-left: 120px;
+    }
+
+    #mainSelect{
+        height: 60px;
+    }
+
+
+    #uploadSectorTwo{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #uploadSectorThree{
+        width: 42vw;
+
+    }
+    input[type="text"]{
+        width: 44vw;
+    }
+    .buttonGold{
+        padding-left: 0;
+    }
+    #buttonSubmit{
+        width: inherit;
+    }
+
+    #uploadBtn{
+        width: 100%;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1025px) {
+
+    body{}
+
+    #sectorContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 92vw;
+    }
+
+    form{
+        width: 52vw;
+    }
+
+    textarea{
+        width: 100%;
+    }
+    #xyz{
+        width: 200px;
+    }
+
+    xyz2{
+        width: 20vw;
+    }
+    #uploadSectorOne{
+        width: initial;
+    }
+
+    main{
+        width: 100vw;
+        margin-left: -3vw;
+    }
+
+}

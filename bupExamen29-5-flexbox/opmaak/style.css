@@ -1,0 +1,222 @@
+/*https://newbedev.com/my-position-sticky-element-isn-t-sticky-when-using-flexbox*/
+
+:root{
+  --widthDocument: 94vw;
+  --colorWhite: #ffffff;
+  --colorMainBlack: #444444;
+}
+
+@font-face {
+  font-family: josefinSans;
+  src: url(../font/JosefinSans-Regular.ttf);
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 94vw;
+  box-sizing: content-box;
+  background-color: var(--colorMainBlack);
+  /*background-color: #44444;*/
+}
+
+article{
+  color: var(--colorWhite);
+}
+
+/*
+flexbasis
+flexgrow
+*/
+
+
+
+#headerContainer{
+  background-color: var(--colorMainBlack);
+
+  /* start position sticky - workaround voor Flexbox
+  Flexbox's default rekt alle elementen uit naar dezelfde height waardoor
+  je niet kunt scrollen. Dus voeg align-self: flex-start op de sticky
+  element waardoor height wordt vervangen naar 'auto'.*/
+  position: sticky;
+  top: 0;
+  /* Dit is de oplossing:  in nieuwer webbrowsers
+  zal het ook zonder de volgende regel werken: align-self: flex-start; */
+align-self: flex-start;
+
+/* voor Safari */
+position: -webkit-sticky;
+/* end position sticky */
+}
+
+.top{
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: var(--widthDocument);
+}
+
+
+/*menu */
+.fas.verbergen, .verbergen{
+  display: none;
+}
+
+nav{
+display: flex;
+}
+
+.geopendeMenuItems{
+  display: inline-block;
+  margin-top: 5vh;
+  background-color: green ;
+}
+
+/*ul{*/
+/*  width: 96vw;*/
+/*  height: 100vh;*/
+/*  display: flex;*/
+/*}*/
+
+li{
+  color: #FFF;
+  font-size: 25px;
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.navigationItems{
+  padding-left: 65px;
+  font-size: 25px;
+}
+
+ul{
+  display: flex;
+}
+/*animatie*/
+.nav__link{
+  color: blue;
+  text-decoration: none;
+  display: inline-block; /*Padding heeft pas zin na een inline-block element, te worden*/
+  padding: .2em .8em;
+  transform: translateY(-21.2em);
+  transition: transform .8s ease-in-out;
+}
+
+.nav__link--schuif-in{
+  transform: translateX(0);
+}
+
+.nav__link:hover{
+  background-color: green;
+}
+
+/*animatie tekst*/
+.nav__item{
+  color: #FFF;
+}
+.nav__item a{
+  padding-left: 2vw;
+}
+.nav__link--schuif-in .nav__text{
+
+  animation: animatie 5s forwards;
+  position: relative;
+}
+
+/*end menu*/
+
+
+.top > div{
+  max-width: 50px;
+  max-height: 50px;
+}
+span{
+  color: #FFF;
+}
+
+main > span{
+  width: 33vw;
+}
+
+.hamburgerButton{
+  width: 3em;
+  color: var(--colorWhite);
+}
+
+hr.hrOne {
+  background-color: blue;
+  width: 100%;
+  display: block;
+  /*width: var(--widthDocument);*/
+}
+
+header{
+  font-family: josefinSans;
+  color: var(--colorWhite);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.headerMainTekst {
+  text-align: center;
+  padding-top: 5px;
+  font-size: 59px;
+  color: var(--colorWhite);
+}
+
+#mainSelect{
+  width: 60vw;
+  border: 1px solid #C98421;
+  border-radius: 15px;
+  height: 3em;
+  padding: 0 10px;
+}
+
+select{
+  border: none;
+  background-color: var(--colorMainBlack);
+}
+
+select, select > option{
+  color: var(--colorWhite);
+}
+
+
+.itemCluster{
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #FFFFFF;
+  width: inherit;
+  border-radius: 20px;
+}
+
+.itemClusterText{
+  font-size: 30px;
+  color: var(--colorWhite);
+}
+
+.buttonMain {
+  background-color: #C98421;
+  border-radius: 15px;
+  font-size: 30px;
+  padding: 2px;
+  width: 45%;
+}
+
+
+
+
+
+@media only screen and (min-width: 1023px) {
+
+}

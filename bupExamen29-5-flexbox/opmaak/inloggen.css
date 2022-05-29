@@ -1,0 +1,40 @@
+.loginPositionering{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+input[type="text"]{
+    border: 1px solid #C98421;
+    background-color: var(--colorMainBlack);
+    border-radius: 30px;
+    padding: 1em;
+    color: #FFF;
+    width: auto;
+    margin-top: 15px;
+    height: 36px;
+}
+
+input[type="submit"]{
+    border: 1px solid #C98421;
+    background-color: var(--colorMainBlack);
+    border-radius: 30px;
+    color: #FFF;
+    width: auto;
+    margin-top: 15px;
+    height: 50px;
+    text-align: center;
+}
+
+placeholder{
+    color: #FFF;
+}
+a{
+    font-size: 17px;
+}
+.wachtwoordVergeten{
+    text-align: center;
+    color: #FFF;
+}

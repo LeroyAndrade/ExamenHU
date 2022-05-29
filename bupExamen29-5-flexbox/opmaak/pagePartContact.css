@@ -1,0 +1,131 @@
+
+#secTwo{
+    width: 80vw;
+}
+
+.verbergVoorMobiel{
+    display: none;
+}
+
+.formAlign{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+}
+
+input[type="text"]{
+    width: inherit;
+    height: 40px;
+    margin-top: 1.3em;
+}
+
+small{
+    color: #FFF;
+    font-size: 8px;
+}
+
+form > div{
+    width: 100%;
+    margin-top: 5%;
+}
+
+.subsectorOne:nth-child(1){
+    margin-top: 1em;
+    background-color: green;
+
+}
+
+::placeholder{
+    padding-left: 15px;
+}
+
+
+textarea{
+    padding: initial;
+    padding-top: 15px;
+    height: 175px;
+    color: #FFF;
+}
+
+
+
+/*overide*/
+.button{
+    padding-left: initial;
+}
+
+@media only screen and (min-width: 767px) {
+
+    .itemClusterContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .itemCluster{
+        margin: 10px;
+        width: 28vw;
+    }
+}
+
+
+
+@media only screen and (min-width: 1023px) {
+
+
+    .formAlign{
+        display: initial;
+    }
+
+    #secTwo{
+        width: 50vw;
+
+    }
+
+    .formAlign{
+        flex-direction: row;
+    }
+
+    .naamInput {
+        width: 65vw;
+    }
+
+    .subsectorOne{
+        width: inherit;
+        display: flex;
+        flex-direction: row;
+    }
+    .subsectorTwo{
+        margin-top: 2%;
+        display: flex;
+        width: 100%;
+
+    }
+
+    .subsectorOne > input[type="text"]{
+        width: inherit;
+    }
+
+    .verbergVoorMobiel{
+        display: initial;
+    }
+
+    .ruimte{
+        width: 5vw;
+    }
+    .subsectorThree{
+       margin-top: 2%;
+        display: flex;
+        flex-display: row;
+
+        justify-content: center;
+    }
+    input[type="submit"]{
+        width: 15vw;
+
+    }
+
+}

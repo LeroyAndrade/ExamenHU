@@ -1,0 +1,458 @@
+:root{
+    --widthDocument: 94vw;
+    --paddingForWidthDocument: 0 3vw;
+    --colorWhite: #ffffff;
+    --colorMainBlack: #444444
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: content-box;
+    background-color: var(--colorMainBlack);
+    overflow-x: hidden;
+    width: 100%;
+    /*background-color: #44444;*/
+}
+
+@font-face
+{
+    font-family: JosefinSans;
+    src: url("../fonts/JosefinSans-Regular.ttf");
+}
+
+@font-face
+{
+    font-family: poppins;
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+header{
+    width: var(--widthDocument);
+    padding: 0 3vw;
+    font-family: JosefinSans;
+}
+
+#headerContainer {
+    background-color: var(--colorMainBlack);
+    /* start position sticky - workaround voor Flexbox
+    Flexbox's default rekt alle elementen uit naar dezelfde height waardoor
+    je niet kunt scrollen. Dus voeg align-self: flex-start op de sticky
+    element waardoor height wordt vervangen naar 'auto'.*/
+    position: sticky;
+    top: 0;
+    /* Dit is de oplossing:  in nieuwer webbrowsers
+    zal het ook zonder de volgende regel werken: align-self: flex-start; */
+    align-self: flex-start;
+
+    /* end position sticky */
+}
+
+/* voor Safari - to test */
+@supports not (position: sticky) {
+    #headerContainer {
+        position: fixed;
+    }
+}
+/*logo links boven*/
+
+#placeholderImage{
+    width: 100%;
+}
+
+.titelText{
+    background-image: url("../img/head/titelAchtergrond.svg");
+
+    height: 100%;
+    width: auto;
+}
+
+#logo{
+    width: 33vw;
+    object-fit: fill;
+}
+
+header > div:nth-child(-n+3){
+
+}
+
+header > div:nth-child(2){
+    margin-top:20%;
+    position: absolute;
+}
+
+.top{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: var(--widthDocument);
+}
+
+/*menu */
+.fas.verbergen, .verbergen{
+    display: none;
+}
+
+nav{
+    display: flex;
+}
+
+
+
+
+
+.geopendeMenuItems{
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /*width: 100vw;*/
+    width: 90.3vw;
+    left: 0;
+    background-color: var(--colorMainBlack);
+    margin-top: -7.6%;
+    margin-left: -3vw;
+    overflow-x: hidden;
+}
+#placeholderImage img{
+    width: 30%;
+    padding-bottom: 1%;
+}
+
+.hamburgerButton{
+    width: 3em;
+    color: var(--colorWhite);
+}
+
+li{
+    color: #FFF;
+    font-size: 25px;
+    list-style-type: none;
+}
+
+a, a:visited{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 45px;
+}
+
+.navigationItems{
+    font-size: 45px;
+}
+
+
+/*animatie*/
+.nav__link{
+    color: #FFF;
+    text-decoration: none;
+    display: inline-block; /*Padding heeft pas zin na een inline-block element, te worden*/
+    padding: .2em .8em;
+    transform: translateY(-21.2em);
+    transition: transform .6s ease-in-out;
+}
+
+.nav__link--schuif-in{
+    transform: translateX(0);
+}
+
+.nav__link:hover{
+
+}
+
+/*animatie tekst*/
+.nav__item{
+    color: #FFF;
+}
+.nav__item a{
+    padding-left: 2vw;
+}
+.nav__link--schuif-in .nav__text{
+
+    animation: animatie 5s forwards;
+    position: relative;
+}
+
+.hideForMobile{
+    display: none;
+}
+
+
+/*end menu mobile*/
+
+/*Titel text*/
+.headerMainTekst {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 59px;
+    color: var(--colorWhite);
+}
+
+main{
+    border: 2px solid #FFF;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    /*border-width: 9vw;*/
+}
+
+
+#hrHead{
+    padding: 0 2vw;
+}
+
+hr{
+
+}
+
+
+/*Content main*/
+#sectorThree{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    width: var(--widthDocument);
+    padding: 0 3vw;
+    align-items: center;
+    height: auto;
+}
+
+
+
+/*footer*/
+footer{
+    margin-top: 5%;
+    font-family: 'sans-serif', JosefinSans;
+    width: initial;
+    width: 100%;
+    display: flex;
+    color: #FFF;
+    justify-content: center;
+}
+a:visited, a:focus{
+    color: #FFF;
+}
+
+#sectorFooterA, #sectorFooterB{
+    display: inherit;
+}
+
+
+
+footer div div, footer div div > a {
+    font-family: JosefinSans;
+    font-size: .85em;
+}
+
+
+
+
+@media only screen and (min-width: 413px) {
+    footer div div, footer div div > a {
+        font-size: .97em;
+    }
+}
+
+.footerA{
+    /*padding-top: 2%;*/
+}
+
+.footerB{
+    border: 1px solid #FFF;
+    border-top-style: none;
+    border-bottom-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*START menu Tablet*/
+@media only screen and (min-width: 767px) {
+    .geopendeMenuItems {
+        margin-top: -10.1vh;
+        width: 100vw;
+    }
+    #placeholderImage img{
+        width: 13%;
+        padding-bottom: 1%;
+    }
+
+
+/* footer    */
+    footer{
+        margin-top: 5%;
+        padding: 0 2vw;
+        width: 94vw;
+        justify-content: space-between;
+
+    }
+
+    .footerB{
+        border: none;
+
+    }
+
+
+
+    #sectorFooterA{
+        display: flex;
+
+    }
+
+    #sectorFooterB{
+
+        justify-content: center;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*START menu Tablet+*/
+@media only screen and (min-width: 1023px) {
+    body{
+        height: auto;
+    }
+    .hideForDesktop{
+        display: none;
+    }
+
+    .hideForMobile{
+        display: flex;
+    }
+
+    .geopendeMenuItems {
+        flex-direction: row;
+        background-color: initial;
+        width: 80vw;
+        margin-left: 18vw;
+        margin-top: 0;
+    }
+
+    .verbergen {
+        /*display: inline-block;*/
+    }
+
+    .nav__link {
+        transform: translateY(0);
+    }
+
+    .navigationItems{
+        font-size: 25px;
+    }
+
+    header > div:nth-child(2){
+        margin-top:0;
+        position: absolute;
+    }
+
+    .nav__knop, .sluitKnop{
+        display: none;
+    }
+
+
+    /*Content main*/
+    #sectorThree{
+        background-color: initial;
+        flex-direction: row;
+        color: #FFF;
+        margin-top: 3%;
+        align-items: initial;
+        padding: initial;
+        width: 100%;
+    }
+
+    #secOne{
+        width: calc(100vw - 80vw);
+        border: 2px solid #000;
+        border-left-style: none;
+        border-top-right-radius: 15px;
+        /*min-height: 100vh;*/
+
+/*    80 over*/
+    }
+
+    #secTwo{
+        width: calc(80vw - 8vw);
+
+/*    8 over*/
+
+    }
+
+    #secThree{
+        width: 8vw;
+
+    }
+
+
+    .titelText{
+        width: 100vw;
+        background-repeat: no-repeat;
+    }
+
+    #placeholderImage img{
+        width: 10%;
+        padding-bottom: 1%;
+    }
+
+    .top > a{
+        margin-top: 1%;
+    }
+}
+
+
+
+
+
+
+
+
+
+footer{
+
+}
+/*@media only screen and (min-width: 1023px) {*/
+/*    .navigationItems{*/
+/*        font-size: 35px;*/
+/*    }*/
+/*    .nav__link::after {*/
+/*        margin-left: 1px;*/
+/*    }*/
+
+/*    .geopendeMenuItems {*/
+
+/*    }*/
+/*}*/

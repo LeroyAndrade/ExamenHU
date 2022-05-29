@@ -1,0 +1,88 @@
+/*Root slaat de variabele ergens op,
+en met var(--foo) haal je die data op uit de specifiek gedeelte van het geheugen.
+Want ieder nieuw gedefinieerde color: #FFFFFF; wordt opnieuw gereserveerd.
+
+Via root (zoals in .SCSS / SASS, sla je alles op in 1 stukje geheugen en vraag je er naar wanneer je het nodig hebt.
+wel is .scss efficiënter*/
+
+:root{
+    --colorWhite: #ffffff;
+    --colorMainBlack: #444444;
+    --inline-block: inline-block;
+    --block: block;
+    --onepixel: 1px;
+    --fff: #FFF;
+    --px27: 27px;
+}
+
+body{
+    background-color: #E5E5E5;
+}
+
+/*draws*/
+.bol{
+    display: flex;
+    /* wanneer de items de hele breedte hebben bereikt, spring dan naar de volgende regel*/
+    justify-content: space-around;
+}
+
+.circel{
+    height: var(--px27);
+    width:  var(--px27);
+    background-color: var(--fff);
+    border-radius: 50%;
+    display: var(--inline-block);
+}
+
+.vertical{
+    height: 80px;
+    width: var(--onepixel);
+    background-color: var(--fff);;
+}
+
+.verticalOne{
+    display: var(--block);
+    margin-top: -5px;
+    margin-left: 13px;
+}
+
+.horizontal{
+    background-color: var(--fff);
+    width: 80px;
+    height: var(--onepixel);
+}
+
+.horizontalOne{
+    display: var(--block);
+    margin-top: -17px;
+    margin-left: 25px;
+}
+
+.circelTwo{
+    margin-top: 10px;
+}
+
+.circelThree{
+    display: var(--block);
+    margin-top: -15px;
+    margin-left: 105px;
+}
+
+.bolContainer::after{
+    margin-left: 120px;
+}
+
+/* end bol containers*/
+
+/* start rotaties */
+.rotate45{
+    transform: rotate(45deg);
+}
+
+.rotate90{
+    transform: rotate(90deg);
+}
+
+.rotate180{
+    transform: rotate(180deg);
+}

@@ -1,0 +1,148 @@
+/*https://newbedev.com/my-position-sticky-element-isn-t-sticky-when-using-flexbox*/
+
+:root{
+  --widthDocument: 94vw;
+  --colorWhite: #ffffff;
+  --colorMainBlack: #444444;
+}
+
+@font-face {
+  font-family: josefinSans;
+  src: url(../font/JosefinSans-Regular.ttf);
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 94vw;
+  box-sizing: content-box;
+  background-color: var(--colorMainBlack);
+  /*background-color: #44444;*/
+}
+
+header{
+  font-family: josefinSans;
+  color: var(--colorWhite);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+article{
+  color: var(--colorWhite);
+}
+
+/*
+flexbasis
+flexgrow
+*/
+
+#headerContainer{
+  background-color: var(--colorMainBlack);
+
+  /* start position sticky - workaround voor Flexbox
+  Flexbox's default rekt alle elementen uit naar dezelfde height waardoor
+  je niet kunt scrollen. Dus voeg align-self: flex-start op de sticky
+  element waardoor height wordt vervangen naar 'auto'.*/
+  position: sticky;
+  top: 0;
+  /* Dit is de oplossing:  in nieuwer webbrowsers
+  zal het ook zonder de volgende regel werken: align-self: flex-start; */
+align-self: flex-start;
+
+/* voor Safari */
+position: -webkit-sticky;
+/* end position sticky */
+}
+
+.top{
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: var(--widthDocument);
+}
+
+.sticky {
+}
+
+.nav__item
+
+.top > div{
+  max-width: 50px;
+  max-height: 50px;
+}
+
+
+main > span{
+  width: 33vw;
+}
+
+.hamburgerButton{
+  width: 3em;
+  color: var(--colorWhite);
+}
+
+hr.hrOne {
+  background-color: blue;
+  width: 100%;
+  display: block;
+  /*width: var(--widthDocument);*/
+}
+
+
+.headerMainTekst {
+  text-align: center;
+  padding-top: 5px;
+  font-size: 59px;
+  color: var(--colorWhite);
+}
+
+#mainSelect{
+  width: 60vw;
+  border: 1px solid #C98421;
+  border-radius: 15px;
+  height: 3em;
+  padding: 0 10px;
+}
+
+select{
+  border: none;
+  background-color: var(--colorMainBlack);
+}
+
+select, select > option{
+  color: var(--colorWhite);
+}
+
+
+.itemCluster{
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #FFFFFF;
+  width: inherit;
+  border-radius: 20px;
+}
+
+.itemClusterText{
+  font-size: 30px;
+  color: var(--colorWhite);
+}
+
+.buttonMain {
+  background-color: #C98421;
+  border-radius: 15px;
+  font-size: 30px;
+  padding: 2px;
+  width: 45%;
+}
+/*@media only screen and (max-width: 600px) {*/
+/*  body {*/
+/*    background-color: blue;*/
+/*  }*/
+
+/*}*/

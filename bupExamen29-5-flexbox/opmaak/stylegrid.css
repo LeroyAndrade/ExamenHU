@@ -1,0 +1,42 @@
+:root{
+    --widthDocument: 94vw;
+    --colorWhite: #ffffff;
+    --colorMainBlack: #444444;
+}
+
+@font-face {
+    font-family: josefinSans;
+    src: url(../font/JosefinSans-Regular.ttf);
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 94vw;
+    background-color: var(--colorMainBlack);
+    /*background-color: #44444;*/
+}
+
+.top{
+    display: grid;
+    grid-template-area:
+    'headerTop . hamburgerButton';
+    width: var(--widthDocument);
+}
+
+.top > div{
+    max-width: 50px;
+    max-height: 50px;
+}
+#placeholderImage{
+    grid-area: headerTop;
+}
+
+.hamburgerButton{
+    grid-area: hamburgerButton;
+}
+
+.top > div{
+    max-width: 50px;
+    max-height: 50px;
+}

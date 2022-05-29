@@ -1,0 +1,68 @@
+
+#secTwo{
+    width: 80vw;
+}
+
+.formAlign{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+small{
+    color: #FFF;
+    font-size: 8px;
+}
+
+
+#wwVergeten{
+    font-size: 18px;
+
+}
+
+@media only screen and (min-width: 767px) {
+
+    .itemClusterContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .itemCluster{
+        margin: 10px;
+        width: 28vw;
+    }
+}
+
+
+
+
+.formAlign{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+small{
+    color: #FFF;
+    font-size: 8px;
+}
+
+
+
+
+@media only screen and (min-width: 767px) {
+
+    .itemClusterContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .itemCluster{
+        margin: 10px;
+        width: 28vw;
+    }
+}
